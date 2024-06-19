@@ -69,7 +69,7 @@ CCWebSocket.connect();
 To send a request through a module:
 
 ```dart
-CCWebSocket.getModule<Unknown>().request(
+CCWebSocket.getModule<Example>().request(
   body: {
     "request_type": "Unknown",
   },
@@ -108,6 +108,3 @@ If you want to contribute, please submit a pull request or open an issue. We val
 ## License
 
 This project is licensed under the MIT License. For more information, see the `LICENSE` file.
-```
-
-Bu metni `Readme.md` dosyanıza yapıştırarak projenizi Flutter pub.dev'de İngilizce olarak yayınlayabilirsiniz.
