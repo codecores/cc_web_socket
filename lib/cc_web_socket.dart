@@ -84,7 +84,7 @@ class CCWebSocket {
 
       CCWebSocket.loggingOptions.broadcastError(
           "Request type not found for response [" +
-              requestType! +
+              requestType +
               ", Response = " +
               response +
               "]");
