@@ -1,6 +1,6 @@
-# CCWebSocket
+# CC Web Socket
 
-CCWebSocket, Flutter uygulamaları için güçlü ve esnek bir WebSocket istemcisi sağlar. Bu paket, WebSocket bağlantılarını kolayca yönetmenize ve özelleştirmenize olanak tanır.
+CC Web Socket, Flutter uygulamaları için güçlü ve esnek bir WebSocket istemcisi sağlar. Bu paket, WebSocket bağlantılarını kolayca yönetmenize ve özelleştirmenize olanak tanır.
 
 ## Özellikler
 
