@@ -1,6 +1,6 @@
 name: cc_web_socket
 description: "A robust and flexible WebSocket client for Flutter applications, enabling easy management and customization of WebSocket connections."
-version: 1.0.0+2
+version: 1.0.0+3
 homepage: https://github.com/codecores/cc_web_socket
 
 environment:

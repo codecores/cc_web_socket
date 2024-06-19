@@ -2,6 +2,9 @@
 
 CC Web Socket provides a robust and flexible WebSocket client for Flutter applications. This package allows you to easily manage and customize WebSocket connections.
 
+**For more detailed information:**
+https://ferhaterdem.medium.com/building-real-time-flutter-apps-with-cc-web-socket-c8429fa5c83c
+
 ## Features
 
 - **Easy Initialization**: Quickly establish WebSocket connections with simple configuration options.
