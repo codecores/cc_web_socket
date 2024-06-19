@@ -1,6 +1,3 @@
-Tabii, işte projenizin `Readme.md` dosyası için uygun formatta hazırlanmış yazı:
-
-```markdown
 # CCWebSocket
 
 CCWebSocket, Flutter uygulamaları için güçlü ve esnek bir WebSocket istemcisi sağlar. Bu paket, WebSocket bağlantılarını kolayca yönetmenize ve özelleştirmenize olanak tanır.
