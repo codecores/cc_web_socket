@@ -18,13 +18,13 @@ class SocketManager {
           onError: (v) async {
             CCWebSocket.loggingOptions.broadcastError("Socket error -> " + v);
             Future.delayed(const Duration(seconds: 2), () {
-              connect();
+              reconnect();
             });
             CCWebSocket.setConnectState(false);
           },
           onDone: () async {
             CCWebSocket.loggingOptions.broadcastClosed("Connection closed");
-            connect();
+            reconnect();
             CCWebSocket.setConnectState(false);
           },
         );
@@ -50,7 +50,7 @@ class SocketManager {
         }
 
         CCWebSocket.loggingOptions.broadcastReconnection("Reconnecting...");
-        connect();
+        reconnect();
       },
     );
   }
@@ -60,7 +60,7 @@ class SocketManager {
       CCWebSocket.loggingOptions
           .broadcastConnection("Connected checking... [2/4]");
       await channel.ready;
-      channel.innerWebSocket!.timeout(const Duration(seconds: 12),
+      channel.innerWebSocket!.timeout(CCWebSocket.socketOptions.connectTimeout!,
           onTimeout: (sink) {
         CCWebSocket.setConnectState(false);
         ping();
@@ -74,11 +74,16 @@ class SocketManager {
       CCWebSocket.loggingOptions
           .broadcastError("An error on connection : " + e.toString());
       Future.delayed(const Duration(seconds: 5), () {
-        connect();
+        reconnect();
       });
       CCWebSocket.setConnectState(false);
       return;
     }
+  }
+
+  static void reconnect() {
+    if (!CCWebSocket.socketOptions.autoConnect!) return;
+    connect();
   }
 
   static Future<bool> connect() async {

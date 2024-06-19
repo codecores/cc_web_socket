@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:cc_web_socket/cc_socket_options.dart';
 import 'package:cc_web_socket/src/request/modules/request_module.dart';
-import 'package:cc_web_socket/example/Unknown.dart';
+import 'package:cc_web_socket/example/Example.dart';
 import 'package:cc_web_socket/src/socket_manager.dart';
 
 class CCWebSocket {
@@ -51,7 +51,7 @@ class CCWebSocket {
         "Request type not found for request [" +
             instance.runtimeType.toString() +
             "]");
-    return Unknown() as T;
+    return Example() as T;
   }
 
   static dedect(String response) async {

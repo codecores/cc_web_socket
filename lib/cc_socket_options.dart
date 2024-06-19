@@ -4,12 +4,14 @@ class CCSocketOptions {
   Duration? pingInterval = Duration(seconds: 120);
 
   String requestTypeName;
+  bool? autoConnect = true;
 
   CCSocketOptions({
     required this.uri,
     required this.requestTypeName,
     this.connectTimeout,
     this.pingInterval,
+    this.autoConnect,
   }) {}
 }
 

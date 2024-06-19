@@ -1,7 +1,7 @@
 import 'package:cc_web_socket/cc_socket_options.dart';
 import 'package:cc_web_socket/cc_web_socket.dart';
 import 'package:cc_web_socket/src/socket_manager.dart';
-import 'package:cc_web_socket/example/Unknown.dart';
+import 'package:cc_web_socket/example/Example.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,6 +16,7 @@ void main() {
       connectTimeout: const Duration(seconds: 5),
       pingInterval: const Duration(seconds: 120),
       requestTypeName: "request_type",
+      autoConnect: true,
     ),
     loggingOptions: CCSocketLogging(
       logEnabled: true,
@@ -27,7 +28,7 @@ void main() {
       onError: (prompt) {},
     ),
     modules: [
-      Unknown(),
+      Example(),
     ],
   );
   CCWebSocket.connect();
@@ -66,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       _counter++;
     });
-    CCWebSocket.getModule<Unknown>().request(
+    CCWebSocket.getModule<Example>().request(
       body: {
         "request_type": "Unknown",
       },
