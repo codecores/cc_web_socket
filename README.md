@@ -1,5 +1,3 @@
-Tabii, işte `Readme.md` dosyanızın İngilizce'ye çevrilmiş hali:
-
 # CC Web Socket
 
 CC Web Socket provides a robust and flexible WebSocket client for Flutter applications. This package allows you to easily manage and customize WebSocket connections.
