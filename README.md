@@ -1,29 +1,31 @@
+Tabii, işte `Readme.md` dosyanızın İngilizce'ye çevrilmiş hali:
+
 # CC Web Socket
 
-CC Web Socket, Flutter uygulamaları için güçlü ve esnek bir WebSocket istemcisi sağlar. Bu paket, WebSocket bağlantılarını kolayca yönetmenize ve özelleştirmenize olanak tanır.
+CC Web Socket provides a robust and flexible WebSocket client for Flutter applications. This package allows you to easily manage and customize WebSocket connections.
 
-## Özellikler
+## Features
 
-- **Kolay Başlatma**: Basit yapılandırma seçenekleriyle hızlıca WebSocket bağlantısı kurabilirsiniz.
-- **Zaman Aşımı ve Ping Ayarları**: Bağlantı zaman aşımı ve ping aralıklarını özelleştirebilirsiniz.
-- **Otomatik Bağlanma**: Bağlantı kesildiğinde otomatik yeniden bağlanma özelliği.
-- **Detaylı Loglama**: Bağlantı durumu, istek ve yanıtlar gibi olayları loglama seçenekleri.
-- **Modüler Yapı**: Eklentiler ve modüller ekleyerek işlevselliği genişletebilirsiniz.
+- **Easy Initialization**: Quickly establish WebSocket connections with simple configuration options.
+- **Timeout and Ping Settings**: Customize connection timeout and ping intervals.
+- **Automatic Reconnection**: Automatically reconnect when the connection is lost.
+- **Detailed Logging**: Options for logging connection status, requests, and responses.
+- **Modular Structure**: Extend functionality with plugins and modules.
 
-## Kurulum
+## Installation
 
-Projenize bu paketi eklemek için `pubspec.yaml` dosyanıza aşağıdaki satırı ekleyin:
+Add this package to your project by including the following line in your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
   cc_web_socket: ^1.0.0
 ```
 
-## Kullanım
+## Usage
 
-### Başlatma
+### Initialization
 
-CCWebSocket'i başlatmak için aşağıdaki kodu kullanın:
+To initialize CCWebSocket, use the following code:
 
 ```dart
 CCWebSocket.init(
@@ -54,20 +56,19 @@ CCWebSocket.init(
 );
 ```
 
-> **NOTE** requestTypeName parametresi dönen verinin doğru modül ile eşleştirilmesi için json içeriğinde bulan tanımlayıcıdır. 
+> **NOTE** The `requestTypeName` parameter is an identifier in the JSON content that matches the correct module for the returned data.
 
+### Connection
 
-### Bağlantı
-
-WebSocket bağlantısını başlatmak için aşağıdaki kodu kullanın:
+To initiate the WebSocket connection, use the following code:
 
 ```dart
 CCWebSocket.connect();
 ```
 
-### Modül Kullanımı
+### Module Usage
 
-Modül üzerinden istek göndermek için:
+To send a request through a module:
 
 ```dart
 CCWebSocket.getModule<Unknown>().request(
@@ -77,9 +78,9 @@ CCWebSocket.getModule<Unknown>().request(
 );
 ```
 
-### Örnek Modül
+### Example Module
 
-Kendi modülünüzü oluşturmak için aşağıdaki gibi bir sınıf tanımlayabilirsiniz:
+You can create your own module by defining a class like this:
 
 ```dart
 class Example extends RequestModule {
@@ -93,7 +94,7 @@ class Example extends RequestModule {
 }
 ```
 
-veya sadece yanıt işlemek için:
+or to handle only the response:
 
 ```dart
 class Example extends RequestModule {
@@ -102,13 +103,13 @@ class Example extends RequestModule {
 }
 ```
 
-## Katkıda Bulunma
+## Contributing
 
-Katkıda bulunmak isterseniz, lütfen bir `pull request` gönderin veya bir `issue` açın. Her türlü geri bildiriminiz bizim için değerlidir.
+If you want to contribute, please submit a pull request or open an issue. We value all kinds of feedback.
 
-## Lisans
+## License
 
-Bu proje MIT Lisansı ile lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına bakabilirsiniz.
+This project is licensed under the MIT License. For more information, see the `LICENSE` file.
 ```
 
-Bu metni `Readme.md` dosyanıza yapıştırarak projenizi Flutter pub.dev'de yayınlayabilirsiniz.
+Bu metni `Readme.md` dosyanıza yapıştırarak projenizi Flutter pub.dev'de İngilizce olarak yayınlayabilirsiniz.
