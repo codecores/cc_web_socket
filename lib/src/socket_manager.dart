@@ -11,7 +11,7 @@ class SocketManager {
     lock.synchronized(
       () async {
         await channel.ready;
-        channel.innerWebSocket!.listen(
+        channel.stream.listen(
           (message) {
             CCWebSocket.dedect(message.toString());
           },
@@ -42,7 +42,7 @@ class SocketManager {
           await Future.delayed(
             const Duration(seconds: 1),
             () async {
-              if (channel.innerWebSocket == null) {
+              if (channel.closeCode == null) {
                 CCWebSocket.setConnectState(false);
               }
             },
@@ -60,7 +60,7 @@ class SocketManager {
       CCWebSocket.loggingOptions
           .broadcastConnection("Connected checking... [2/4]");
       await channel.ready;
-      channel.innerWebSocket!.timeout(CCWebSocket.socketOptions.connectTimeout!,
+      channel.stream.timeout(CCWebSocket.socketOptions.connectTimeout!,
           onTimeout: (sink) {
         CCWebSocket.setConnectState(false);
         ping();
