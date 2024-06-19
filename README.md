@@ -49,7 +49,7 @@ CCWebSocket.init(
     onError: (prompt) {},
   ),
   modules: [
-    Unknown(),
+    Example(),
   ],
 );
 ```
