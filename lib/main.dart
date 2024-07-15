@@ -1,6 +1,6 @@
 import 'package:cc_web_socket/cc_socket_options.dart';
 import 'package:cc_web_socket/cc_web_socket.dart';
-import 'package:cc_web_socket/example/Example.dart';
+import 'package:cc_web_socket/example/example.dart';
 import 'package:flutter/material.dart';
 
 void main() {

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:cc_web_socket/src/socket_manager.dart';
-import 'package:cc_web_socket/src/request/handlers/IRequest.dart';
+import 'package:cc_web_socket/src/request/handlers/i_request.dart';
 
 abstract class RequestModule implements IRequest {
   String requestName = "";
