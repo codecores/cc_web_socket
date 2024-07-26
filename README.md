@@ -1,3 +1,5 @@
+[![pub package](https://img.shields.io/pub/v/http.svg)](https://pub.dev/packages/cc_web_socket)
+
 # CC Web Socket
 
 CC Web Socket provides a robust and flexible WebSocket client for Flutter applications. This package allows you to easily manage and customize WebSocket connections.
